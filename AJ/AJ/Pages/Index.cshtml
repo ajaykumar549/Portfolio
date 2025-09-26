@@ -1,0 +1,551 @@
+﻿@*@page
+    @model IndexModel
+    @{
+        ViewData["Title"] = "Home page";
+    }
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Name | Portfolio: Home Projects Skills About Contact</title>
+        <style>
+            /* CSS Reset */
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Variables */
+            :root {
+                --primary-color: #007bff;
+                --secondary-color: #6c757d;
+                --text-color: #343a40;
+                --background-color: #f8f9fa;
+                --header-bg-color: #343a40;
+                --footer-bg-color: #343a40;
+                --box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+            }
+
+            /* General Styles */
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: var(--text-color);
+                background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            /* Styles for Sections */
+            #hero {
+                background-color: #e9ecef;
+                padding: 3rem 2rem;
+                text-align: center;
+                border-radius: 5px;
+                margin: 2rem 1rem;
+                box-shadow: var(--box-shadow);
+            }
+
+                #hero h2 {
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                    border-bottom: none;
+                }
+
+                #hero p {
+                    font-size: 1.2rem;
+                    margin-bottom: 2rem;
+                }
+
+            .button {
+                display: inline-block;
+                padding: 0.75rem 1.5rem;
+                background-color: var(--primary-color);
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.2s ease;
+            }
+
+                .button:hover {
+                    background-color: darken(var(--primary-color), 10%);
+                }
+
+            #projects {
+                padding: 2rem;
+            }
+
+            .project {
+                border: 1px solid #ddd;
+                padding: 1.5rem;
+                border-radius: 5px;
+                margin-bottom: 2rem;
+                box-shadow: var(--box-shadow);
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+                .project img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 5px;
+                    margin-bottom: 1rem;
+                }
+
+            #skills {
+                padding: 2rem;
+            }
+
+                #skills h3 {
+                    margin-top: 1.5rem;
+                    margin-bottom: 0.5rem;
+                    border-bottom: 1px solid #ccc;
+                    padding-bottom: 0.25rem;
+                }
+
+                #skills ul {
+                    list-style: none;
+                    padding: 0;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                    gap: 1rem;
+                }
+
+                #skills li {
+                    background-color: #fff;
+                    padding: 0.75rem;
+                    border-radius: 5px;
+                    box-shadow: var(--box-shadow);
+                    text-align: center;
+                }
+
+            #about {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+                #about img {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 1rem;
+                }
+
+            #contact {
+                padding: 2rem;
+            }
+
+                #contact ul {
+                    list-style: none;
+                    padding: 0;
+                }
+
+                #contact li {
+                    margin-bottom: 0.75rem;
+                }
+
+                #contact a {
+                    color: var(--primary-color);
+                    text-decoration: none;
+                }
+
+                    #contact a:hover {
+                        text-decoration: underline;
+                    }
+
+            footer {
+                background-color: var(--footer-bg-color);
+                color: #fff;
+                text-align: center;
+                padding: 1rem;
+                margin-top: auto;
+                box-shadow: var(--box-shadow);
+            }
+
+
+
+            }
+
+            /* Section Styling (hide/show) */
+            .section {
+                /* display: none; */
+                /*Commented out as all sections are now meant to be displayed*/
+            }
+
+                .section.active {
+                    display: block;
+                }
+        </style>
+    </head>
+
+    <body>
+
+        <main>
+            <section id="home" class="section">
+                <h2>Welcome!</h2>
+                <p>Passionate software engineer with experience in software development. Eager to contribute to innovative projects and solve challenging problems.</p>
+                <a href="#projects" class="button">View My Work</a>
+            </section>
+
+            <section id="projects" class="section">
+                <h2>Projects</h2>
+
+                <div class="project">
+                    <h3>Project 1 Title</h3>
+                    <img src="images/project1.png" alt="Project 1 Screenshot">
+                    <p>Detailed project description, technologies used, your role, and challenges faced.</p>
+                    <a href="https://github.com/PilotAngels/HospitalFlightRequest">View Code</a>
+                    <a href="https://live-demo-url1.com">Live Demo</a>
+                </div>
+
+                <div class="project">
+                    <h3>Project 2 Title</h3>
+                    <img src="images/project2.png" alt="Project 2 Screenshot">
+                    <p>Detailed project description, technologies used, your role, and challenges faced.</p>
+                    <a href="https://github.com/your-username/project2">View Code</a>
+                    <a href="https://live-demo-url2.com">Live Demo</a>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2>Skills</h2>
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                </ul>
+                <h3>Frameworks/Libraries</h3>
+                <ul>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Angular</li>
+                    <li>Spring</li>
+                </ul>
+                <h3>Databases</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                </ul>
+                <h3>Tools</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>Docker</li>
+                    <li>AWS</li>
+                    <li>Jenkins</li>
+                </ul>
+            </section>
+
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <img src="images/your-photo.jpg" alt="Your Photo">
+                <p>Detailed information about your background, experience, passions, and career goals. Include relevant achievements and a personal touch.</p>
+                <p>Add more paragraphs as needed to fully express yourself.</p>
+                <a href="resume.pdf" class="button">Download Resume</a>
+            </section>
+
+            <section id="contact" class="section">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out for collaborations, opportunities, or just to connect!</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/your-profile">linkedin.com/in/your-profile</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/your-username">github.com/your-username</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2023 Your Name</p>
+        </footer>
+    </body>
+
+    </html>*@
+
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+    <style>
+        /* CSS Reset */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Variables */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --text-color: #343a40;
+            --background-color: #f8f9fa;
+            --header-bg-color: #343a40;
+            --footer-bg-color: #343a40;
+            --box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Styles for Sections */
+        #hero {
+            background-color: #e9ecef;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 5px;
+            margin: 2rem 1rem;
+            box-shadow: var(--box-shadow);
+        }
+
+            #hero h2 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                border-bottom: none;
+            }
+
+            #hero p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+
+            .button:hover {
+                background-color: #0056b3; /* Darker shade */
+            }
+
+        #projects {
+            padding: 2rem;
+        }
+
+        .project {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+            .project img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+                margin-bottom: 1rem;
+            }
+
+        #skills {
+            padding: 2rem;
+        }
+
+            #skills h3 {
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 0.25rem;
+            }
+
+            #skills ul {
+                list-style: none;
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            #skills li {
+                background-color: #fff;
+                padding: 0.75rem;
+                border-radius: 5px;
+                box-shadow: var(--box-shadow);
+                text-align: center;
+            }
+
+        #about {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            #about img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 1rem;
+            }
+
+        #contact {
+            padding: 2rem;
+        }
+
+            #contact ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            #contact li {
+                margin-bottom: 0.75rem;
+            }
+
+            #contact a {
+                color: var(--primary-color);
+                text-decoration: none;
+            }
+
+                #contact a:hover {
+                    text-decoration: underline;
+                }
+
+        footer {
+            background-color: var(--footer-bg-color);
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+            box-shadow: var(--box-shadow);
+        }
+
+        /* Section Styling */
+        .section {
+            /* display: none; */
+            /* Commented out as all sections are now meant to be displayed */
+        }
+
+            .section.active {
+                display: block;
+            }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <section id="home" class="section">
+            <h2>Welcome!</h2>
+            <p>Passionate software engineer with experience in software development. Eager to contribute to innovative projects and solve challenging problems.</p>
+            <a href="#projects" class="button">View My Work</a>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>Hospital Flight Request System</h3>
+                <img src="images/project1.png" alt="Project 1 Screenshot">
+                <p>Enterprise-level request management system for Husky Air’s Pilot Angels program, built with ASP.NET Core, SQL Server, and Angular, featuring scheduling automation and audit logging.</p>
+                <a href="https://github.com/PilotAngels/HospitalFlightRequest">View Code</a>
+                <a href="https://live-demo-url1.com">Live Demo</a>
+            </div>
+
+            <div class="project">
+                <h3>Project 2 Title</h3>
+                <img src="images/project2.png" alt="Project 2 Screenshot">
+                <p>Detailed project description, technologies used, your role, and challenges faced.</p>
+                <a href="https://github.com/your-username/project2">View Code</a>
+                <a href="https://live-demo-url2.com">Live Demo</a>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <h3>Programming Languages</h3>
+            <ul>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+            </ul>
+            <h3>Frameworks/Libraries</h3>
+            <ul>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Angular</li>
+                <li>Spring</li>
+            </ul>
+            <h3>Databases</h3>
+            <ul>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+            </ul>
+            <h3>Tools</h3>
+            <ul>
+                <li>Git</li>
+                <li>Docker</li>
+                <li>AWS</li>
+                <li>Jenkins</li>
+            </ul>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <img src="images/your-photo.jpg" alt="Your Photo">
+            <p>Detailed information about your background, experience, passions, and career goals. Include relevant achievements and a personal touch.</p>
+            <p>Add more paragraphs as needed to fully express yourself.</p>
+            <a href="resume.pdf" class="button">Download Resume</a>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaborations, opportunities, or just to connect!</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/your-profile">linkedin.com/in/your-profile</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/your-username">github.com/your-username</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Your Name</p>
+    </footer>
+</body>
+
+</html>
